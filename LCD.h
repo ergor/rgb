@@ -19,6 +19,7 @@
 #define LCD_CMD_SHIFTRIGHT	0b11100
 #define LCD_CMD_SEL_LINE_1	0x80
 #define LCD_CMD_SEL_LINE_2	(0x80 | 0x40)
+#define LCD_CMD_CURSOR_OFF  0b1100
 
 
 

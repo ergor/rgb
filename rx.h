@@ -10,7 +10,7 @@
 
 #define RX_BUF_SZ   16
 
-extern char rx_done;
+extern volatile char rx_done;
 extern char rx_data[];
 
 void recv(void);

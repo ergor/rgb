@@ -13,7 +13,7 @@
 #include "rx.h"
 
 int idx = 0;
-char rx_done = 0;
+volatile char rx_done = 0;
 char rx_buf[RX_BUF_SZ] = {0};
 char rx_data[RX_BUF_SZ];
 
@@ -28,6 +28,8 @@ void recv()
     }
     else if (idx < RX_BUF_SZ - 1) { // -1 for 0-character
         rx_buf[idx++] = rx;
+        loop_until_bit_is_set(UCSRA, UDRE);
         UDR = rx; // echo
     }
+    //printf("\nidx=%d, rx_done=%d\nrx_buf: %s\n", idx, rx_done, rx_buf);
 }

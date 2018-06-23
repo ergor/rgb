@@ -12,5 +12,6 @@
 
 void uart_cb();
 void parse_val();
+void pwm();
 
 #endif /* MAIN_H_ */
