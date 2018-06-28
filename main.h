@@ -8,10 +8,7 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#include <stdio.h>
-
-void uart_cb();
 void parse_val();
-void pwm();
+void gen_pwm();
 
 #endif /* MAIN_H_ */

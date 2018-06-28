@@ -5,6 +5,8 @@
  *  Author: Erol
  */ 
 
+#ifdef PROJECT_BOARD_LCD
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include "LCD.h"
@@ -85,3 +87,5 @@ void LCD_init()
 	// set for two row operation
 	LCD_send_cmd(LCD_CMD_2LINE);
 }
+
+#endif
